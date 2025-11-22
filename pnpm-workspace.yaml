@@ -1,0 +1,11 @@
+# pnpm 工作区配置文件
+packages:
+  - '.'  # 根包
+  - 'docs-vitepress'  # 文档包
+
+# 依赖链接配置
+prefer-workspace-packages: true
+link-workspace-packages: true
+
+# 共享依赖配置
+shared-workspace-lockfile: true

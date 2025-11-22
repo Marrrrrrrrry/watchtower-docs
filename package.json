@@ -1,0 +1,53 @@
+{
+  "name": "watchtower-docs",
+  "version": "1.0.0",
+  "description": "Watchtower documentation built with VitePress - Independent Project",
+  "type": "module",
+  "packageManager": "pnpm@8.15.0",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs-vitepress",
+    "docs:build": "vitepress build docs-vitepress",
+    "docs:preview": "vitepress preview docs-vitepress",
+    "docs:serve": "vitepress serve docs-vitepress",
+    "docs:clean": "rm -rf dist node_modules .vitepress/cache",
+    "docs:install": "pnpm install",
+    "docs:update": "pnpm update",
+    "docs:typecheck": "vue-tsc --noEmit",
+    "docs:lint": "eslint docs-vitepress --ext .vue,.js,.ts,.md",
+    "deploy": "pnpm docs:build && echo 'Documentation built successfully! Ready for deployment.'"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0",
+    "vue": "^3.3.0",
+    "markdown-it-admonition": "^1.0.0",
+    "@types/node": "^20.0.0",
+    "vue-tsc": "^1.8.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
+  },
+  "dependencies": {
+    "mermaid": "^10.6.0"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": ["@algolia/client-search", "@types/react", "react", "react-dom"]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/watchtower-docs.git"
+  },
+  "keywords": [
+    "watchtower",
+    "docker",
+    "documentation",
+    "vitepress"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "watchtower-docs",
+  "version": "1.0.0",
+  "description": "Documentation for Watchtower - A process for automating Docker container base image updates",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs-vitepress",
+    "docs:build": "vitepress build docs-vitepress",
+    "docs:preview": "vitepress preview docs-vitepress",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "deploy": "pnpm run build && gh-pages -d dist"
+  },
+  "keywords": [
+    "docker",
+    "watchtower",
+    "container",
+    "automation",
+    "documentation",
+    "vitepress"
+  ],
+  "author": "containrrr",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.2",
+    "vue": "^3.4.0",
+    "gh-pages": "^6.2.0",
+    "markdown-it-admonition": "^1.0.4"
+  },
+  "dependencies": {
+    "mermaid": "^11.4.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.12.0"
+}
